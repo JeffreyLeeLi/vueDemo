@@ -7,14 +7,15 @@
 	</head>
 	<body>
 		<div id="view">
-			{{message}}
+			{{message}} {{name}}
 		</div>
 		
 		<script type="text/javascript">
 			var app = new Vue({
 				el: "#view",
 				data: {
-					message: "hello world"
+					message: "hello world",
+					name: "Vue"
 				}
 			});
 		</script>
