@@ -22,7 +22,7 @@
 			app.$watch("name", function(newVal, oldVal) {
 				console.log(oldVal, "->", newVal);
 			});
-			model.name = "Vue";
+			app.$data.name = "Vue";
 		</script>
 	</body>
 </html>
