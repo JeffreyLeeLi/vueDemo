@@ -11,18 +11,18 @@
 		</div>
 		
 		<script type="text/javascript">
-			var data = {
+			var model = {
 					message: "hello world",
 					name: ""
 			};
 			var app = new Vue({
 				el: "#view",
-				data: data
+				data: model
 			});
 			app.$watch("name", function(newVal, oldVal) {
 				console.log(oldVal, "->", newVal);
 			});
-			data.name = "Vue";
+			model.name = "Vue";
 		</script>
 	</body>
 </html>
