@@ -19,6 +19,9 @@
 				el: "#view",
 				data: data
 			});
+			app.$watch("name", function(newVal, oldVal) {
+				console.log(oldVal, "->", newVal);
+			});
 			data.name = "Vue";
 		</script>
 	</body>
