@@ -10,13 +10,15 @@
 			{{message}} {{name}}
 			<span v-once>{{name}}</span>
 			<p v-html="rawHtml"></p>
+			<div v-bind:class="dynamicColor">text with dynamic bond attribute</div>
 		</div>
 		
 		<script type="text/javascript">
 			var model = {
 					message: "hello world",
 					name: "",
-					rawHtml: "<span style='color:red'>this should be red</span>"
+					rawHtml: "<span style='color:red'>this should be red</span>",
+					dynamicColor: "largeBlue"
 			};
 			var app = new Vue({
 				el: "#view",
@@ -46,5 +48,9 @@
 			app.$data.name = "Vue";
 			console.log(model.name == app.$data.name);
 		</script>
+		<style type="text/css">
+			.normalRed{color:red}
+			.largeBlue{color:blue; font-size:50px;}
+		</style>
 	</body>
 </html>
