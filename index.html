@@ -11,6 +11,7 @@
 			<span v-once>{{name}}</span>
 			<p v-html="rawHtml"></p>
 			<div v-bind:class="dynamicColor">text with dynamic bond attribute</div>
+			<p>n+1={{n+1}}</p>
 		</div>
 		
 		<script type="text/javascript">
@@ -18,7 +19,8 @@
 					message: "hello world",
 					name: "",
 					rawHtml: "<span style='color:red'>this should be red</span>",
-					dynamicColor: "largeBlue"
+					dynamicColor: "largeBlue",
+					n: 10
 			};
 			var app = new Vue({
 				el: "#view",
