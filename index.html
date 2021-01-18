@@ -17,7 +17,7 @@
 			<p v-if="n<=10">n is smaller than 10</p>
 			<a v-bind:href="url">a link</a>
 			<div @click="onOuterClicked">
-				<div @click="onInnerClicked">
+				<div @click.stop="onInnerClicked">
 					Button
 				</div>
 			</div>
