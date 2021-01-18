@@ -9,7 +9,7 @@
 		<div id="view">
 			{{message}} {{name}}
 			<span v-once>{{name}}</span>
-			<p>{{rawHtml}}</p>
+			<p v-html="rawHtml"></p>
 		</div>
 		
 		<script type="text/javascript">
