@@ -9,12 +9,14 @@
 		<div id="view">
 			{{message}} {{name}}
 			<span v-once>{{name}}</span>
+			<p>{{rawHtml}}</p>
 		</div>
 		
 		<script type="text/javascript">
 			var model = {
 					message: "hello world",
-					name: ""
+					name: "",
+					rawHtml: "<span style='color:red'>this should be red</span>"
 			};
 			var app = new Vue({
 				el: "#view",
