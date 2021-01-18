@@ -10,7 +10,7 @@
 			{{message}} {{name}}
 			<span v-once>{{name}}</span>
 			<p v-html="rawHtml"></p>
-			<div class="emphasis" v-bind:class="dynamicColor">text with dynamic bond attribute</div>
+			<div class="emphasis" v-bind:class="[dynamicColor, 'large']">text with dynamic bond attribute</div>
 			<p>n+1={{n+1}}</p>
 			<p>{{n > 10 ? "larger than 10" : "less than or equal to 10"}}</p>
 			{{message.split("").reverse().join("")}}
@@ -28,7 +28,7 @@
 					message: "hello world",
 					name: "",
 					rawHtml: "<span style='color:red'>this should be red</span>",
-					dynamicColor: "largeBlue",
+					dynamicColor: "normalBlue",
 					n: 10,
 					url: "https://bing.com"
 			};
@@ -69,8 +69,9 @@
 			console.log(model.name == app.$data.name);
 		</script>
 		<style type="text/css">
-			.normalRed{color:red}
-			.largeBlue{color:blue; font-size:50px;}
+			.normalRed{color:red;}
+			.normalBlue{color:blue;}
+			.large{color:blue; font-size:50px;}
 			.emphasis{font-style:italic;}
 		</style>
 	</body>
