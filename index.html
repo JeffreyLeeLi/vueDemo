@@ -16,6 +16,11 @@
 			{{message.split("").reverse().join("")}}
 			<p v-if="n<=10">n is smaller than 10</p>
 			<a v-bind:href="url">a link</a>
+			<div @click="onOuterClicked">
+				<div @click="onInnerClicked">
+					Button
+				</div>
+			</div>
 		</div>
 		
 		<script type="text/javascript">
@@ -30,6 +35,14 @@
 			var app = new Vue({
 				el: "#view",
 				data: model,
+				methods: {
+					onOuterClicked: function () {
+						console.log("onOuterClicked");
+					},
+					onInnerClicked: function () {
+						console.log("onInnerClicked");
+					}
+				},
 				beforeCreate: function(){
 					console.log("beforeCreate");
 				},
