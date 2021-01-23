@@ -15,7 +15,7 @@
 			<p>{{n > 10 ? "larger than 10" : "less than or equal to 10"}}</p>
 			{{message.split("").reverse().join("")}}
 			<p v-if="n<=10">n is smaller than 10</p>
-			<a v-bind:href="'https://'+url">a link</a>
+			<a v-bind:[attribute_name]="'https://'+url">a link</a>
 			<div @click="onOuterClicked">
 				<div @click.stop="onInnerClicked">
 					Button
@@ -30,6 +30,7 @@
 					rawHtml: "<span style='color:red'>this should be red</span>",
 					dynamicColor: "normalBlue",
 					n: 10,
+					attribute_name: "href",
 					url: "bing.com"
 			};
 			var app = new Vue({
